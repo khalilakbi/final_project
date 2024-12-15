@@ -56,7 +56,7 @@ public class Base {
     }
 
     // selenium api (common api)
-    public void clickOnElement(WebElement element) {
+    public static void clickOnElement(WebElement element) {
         element.click();
     }
 
