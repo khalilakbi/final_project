@@ -9,13 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends Base {
     // var  web element
+
     @FindBy(name = "username") // locator
     WebElement inputUsername;
     @FindBy(name = "password")
     WebElement inputPassword;
     @FindBy(tagName = "button")
     WebElement loginButton;
-
     @FindBy(xpath = "//span[text()='Required']")
     WebElement requiredMSG;
 
