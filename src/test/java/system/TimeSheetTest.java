@@ -22,14 +22,9 @@ public class TimeSheetTest extends Base {
         homePage.clickOnLogin();
         logger.info("click on Time");
         timeSheetPage.ClickOnTime();
-        logger.info("click drop down");
+        logger.info("click Timesheets");
         timeSheetPage.ClickOnTimeSheet();
-
-
-
-
-
-
-
+        logger.info("select My Timesheets");
+        timeSheetPage.SelectTimesheets();
     }
 }

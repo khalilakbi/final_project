@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.annotations.Test;
 
 public class TimeSheetPage extends Base {
 
@@ -16,7 +15,8 @@ public class TimeSheetPage extends Base {
     WebElement elementTime;
 @FindBy(xpath = "//span[@class='oxd-topbar-body-nav-tab-item']")
     WebElement timesheets;
-
+    @FindBy(xpath = "//a[text()='My Timesheets']")
+    WebElement MyTimesheets;
 
 public void ClickOnTime(){
     wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Time']")));
@@ -25,6 +25,10 @@ public void ClickOnTime(){
 public void ClickOnTimeSheet(){
     wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='oxd-topbar-body-nav-tab-item']")));
     clickOnElement(timesheets);
-
 }
+    public void SelectTimesheets() {
+        wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='My Timesheets']"))));
+        clickOnElement(MyTimesheets);
+
+    }
 }
