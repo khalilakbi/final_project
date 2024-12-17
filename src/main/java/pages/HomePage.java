@@ -43,4 +43,11 @@ public class HomePage extends Base {
         wait.until(ExpectedConditions.visibilityOf(requiredMSG));
         return requiredMSG.isDisplayed();
     }
+
+
+    public void doLogin(String username, String password) {
+        enterUserName(username);
+        enterPassword(password);
+        clickOnLogin();
+    }
 }

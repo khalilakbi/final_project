@@ -108,8 +108,9 @@ public class AddCustomFieldsPage extends Base {
         wait.until(ExpectedConditions.visibilityOf(requiredMSG));
         return requiredMSG.isDisplayed();
     }
-}
 
+
+}
 
 
 

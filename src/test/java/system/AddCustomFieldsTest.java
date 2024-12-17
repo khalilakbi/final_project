@@ -15,11 +15,11 @@ public class AddCustomFieldsTest extends Base {
 String customFieldName="(4) Record Found";
     @Test
 public void ValidCustomFieldsTest() throws InterruptedException {
-    HomePage homePage= new HomePage();
+        HomePage homePage= new HomePage();
+      //  homePage.doLogin("Admin", "admin123");
     AddCustomFieldsPage addCustomFieldsPage= new AddCustomFieldsPage();
-    logger.info("start test case valid login");
-    logger.info("open orange hrm application");
-    homePage = new HomePage();
+   logger.info("start test case valid login");
+   logger.info("open orange hrm application");
     logger.info("enter a valid username");
     homePage.enterUserName(validUsername);
     logger.info("enter a valid password");
@@ -48,6 +48,34 @@ public void ValidCustomFieldsTest() throws InterruptedException {
    // Assert.assertEquals(driver.getCurrentUrl(), accountPageURL);
          Assert.assertEquals(customFieldName,"(4) Record Found");
 }
+
+@Test
+    public void CustomFieldsTestWithoutFieldName() throws InterruptedException {
+    HomePage homePage= new HomePage();
+      homePage.doLogin("Admin", "admin123");
+      AddCustomFieldsPage addCustomFieldsPage=new AddCustomFieldsPage();
+    logger.info("click on PIM");
+    addCustomFieldsPage.ClickOnPIM();
+    logger.info("click on configuration element");
+    addCustomFieldsPage.ClickOnConfiguration();
+    logger.info("Click OnChevron Down Element");
+    addCustomFieldsPage.ClickOnChevronDownElement();
+    logger.info("Click On Custom Fields");
+    addCustomFieldsPage.ClickOnCustomFields();
+    logger.info("Click On Add Button");
+    addCustomFieldsPage.ClickOnAddButton();
+    addCustomFieldsPage.clickOnDropDown();
+    addCustomFieldsPage.clickOnPersonalDetails();
+    addCustomFieldsPage.clickOnTypeElement();
+    addCustomFieldsPage.clickOnTextOrNumber();
+    Thread.sleep(1000);
+    addCustomFieldsPage.clickOnSaveButton();
+    Assert.assertTrue(homePage.isRequiredMSGDisplay());
+
+
+
+}
+
 
     }
 
