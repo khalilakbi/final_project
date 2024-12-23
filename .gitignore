@@ -7,7 +7,7 @@
 /reports
 /test-output
 /logs
-# Compiled class file
+# Compiled class fileGIT
 *.class
 
 # Log file
