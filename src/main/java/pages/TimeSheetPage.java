@@ -17,6 +17,10 @@ public class TimeSheetPage extends Base {
     WebElement timesheets;
     @FindBy(xpath = "//a[text()='My Timesheets']")
     WebElement MyTimesheets;
+@FindBy(xpath = "//input[@placeholder='yyyy-dd-mm']")
+WebElement EnterDate;
+
+
 
 public void ClickOnTime(){
     wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Time']")));
@@ -29,6 +33,11 @@ public void ClickOnTimeSheet(){
     public void SelectTimesheets() {
         wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='My Timesheets']"))));
         clickOnElement(MyTimesheets);
+    }
+    public void ClickInInput(){
+    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='yyyy-dd-mm']")));
+        clickOnElement(EnterDate);
+
 
     }
 }

@@ -11,7 +11,7 @@ public class TimeSheetTest extends Base {
     String validUsername = "Admin";
     String validPassword = "admin123";
     @Test
-    public void SubmitMyTimesheet() throws InterruptedException {
+    public void SubmitMyTimesheet() {
         HomePage homePage = new HomePage();
         TimeSheetPage timeSheetPage = new TimeSheetPage();
         logger.info("enter a valid username");
@@ -26,5 +26,8 @@ public class TimeSheetTest extends Base {
         timeSheetPage.ClickOnTimeSheet();
         logger.info("select My Timesheets");
         timeSheetPage.SelectTimesheets();
+        logger.info("input Date");
+        timeSheetPage.ClickInInput();
+
     }
 }
