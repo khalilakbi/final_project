@@ -19,7 +19,6 @@ String EducationLevel ="(5) Records Found";
         homePage.doLogin("Admin", "admin123");
         AddAdminQualificationPage addAdminQualificationPage = new AddAdminQualificationPage();
         logger.info("Click On Admin Element");
-
         addAdminQualificationPage.ClickOnAdminElement();
         logger.info("Click On Qualifications");
         Thread.sleep(3000);
