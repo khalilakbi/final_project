@@ -4,7 +4,6 @@ import base.Base;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AddAdminNationalitiesPage;
-import pages.AddAdminQualificationPage;
 import pages.HomePage;
 
 public class AddAdminNationalitiesTest extends Base {

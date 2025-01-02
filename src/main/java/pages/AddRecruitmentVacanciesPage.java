@@ -41,6 +41,13 @@ public class AddRecruitmentVacanciesPage extends Base {
     WebElement SaveButton;
     @FindBy(xpath = "//span[text()='Required']")
     WebElement requiredMSG;
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div")
+   WebElement JobTitleElement;
+
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]")
+    WebElement SearchButton;
+    @FindBy(xpath = "//span[text()='Chief Executive Officer']")
+    WebElement selectAutomatonTester;
 
 
     public void ClickOnRecruitment() {
@@ -107,6 +114,20 @@ public class AddRecruitmentVacanciesPage extends Base {
     public boolean isRequiredMSGDisplay() {
         wait.until(ExpectedConditions.visibilityOf(requiredMSG));
         return requiredMSG.isDisplayed();
+    }
+    public void ClickOnSelectJobTitle(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div")));
+        clickOnElement(JobTitleElement);
+    }
+    public void SelectAutomatonTester(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Chief Executive Officer']")));
+        selectAutomatonTester.click();
+    }
+
+    public void ClickOnSearchButton() throws InterruptedException {
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]")));
+        Thread.sleep(3000);
+        clickOnElement(SearchButton);
     }
 }
 
