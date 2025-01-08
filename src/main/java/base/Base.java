@@ -8,7 +8,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -72,12 +71,6 @@ public class Base {
         Actions actions = new Actions(driver);
         actions.moveToElement(element);
     }
-
-    public void selectFromDropDownByVisibleText(WebElement element, String text) {
-        Select select = new Select(element);
-        select.selectByVisibleText(text);
-    }
-
 
     // method to take screenshot
     public void takeScreenShot(String testName) {
