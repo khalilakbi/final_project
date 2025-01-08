@@ -19,6 +19,12 @@ public class AddRecruitmentCandidatePage extends Base {
     WebElement elementCandidates;
     @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]/i")
     WebElement elementJobTitleDropDown;
+    @FindBy(xpath ="//input[@placeholder='From']" )
+    WebElement inputDate;
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[3]/div/div[2]/div")
+    WebElement nextButton;
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[3]/div/div[2]/div")
+    WebElement currentMonthYear;
 
 
 
@@ -35,6 +41,13 @@ public class AddRecruitmentCandidatePage extends Base {
     public void ClickOnSelectJobTitle() {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]/i")));
         clickOnElement(elementJobTitleDropDown);
+    }
+    public void ClickOnDateFrom(String givenMonthYear){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='From']")));
+        inputDate.click();
+        while (!givenMonthYear.equals(currentMonthYear.getText().contains("March 2025"))){
+            nextButton.click();
+        }
     }
 }
 
