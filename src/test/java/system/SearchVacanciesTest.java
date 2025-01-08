@@ -31,5 +31,6 @@ public class SearchVacanciesTest extends Base {
        Assert.assertEquals(Vacancies,"No Records Found");
 
 
+
     }
 }

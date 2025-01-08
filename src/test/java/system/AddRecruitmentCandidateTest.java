@@ -21,6 +21,10 @@ public class AddRecruitmentCandidateTest extends Base {
         logger.info("Click On Candidates Element");
         addRecruitmentCandidatePage.ClickOnCandidates();
         addRecruitmentCandidatePage.ClickOnSelectJobTitle();
+        String givenMonthYear= "March 2025";
+        addRecruitmentCandidatePage.ClickOnDateFrom("March 2025");
+        Thread.sleep(3000);
+
 
 
 
