@@ -47,7 +47,7 @@ public class AddingGradePage extends Base {
 
     public void InputGradeName(String name) throws InterruptedException {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@class='oxd-input oxd-input--active']")));
-        enterGradeName.sendKeys("grade A");
+        enterGradeName.sendKeys(name);
     }
 
     public void ClickSaveButton() {

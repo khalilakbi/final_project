@@ -11,6 +11,7 @@
         <classes>
             <!--            test class below -->
             <class name="system.LoginTest"/>
+            <class name="system.AddAdminNationalitiesTest"></class>
 
 
         </classes>

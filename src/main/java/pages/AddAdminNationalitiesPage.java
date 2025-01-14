@@ -26,8 +26,6 @@ public class AddAdminNationalitiesPage extends Base {
     WebElement requiredMSG;
 
 
-
-
     public void ClickOnAdminElement() {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Admin']")));
         clickOnElement(AdminElement);
@@ -38,18 +36,22 @@ public class AddAdminNationalitiesPage extends Base {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='Nationalities']")));
         clickOnElement(NationalitiesElement);
     }
-    public void ClickOnAddButton(){
+
+    public void ClickOnAddButton() {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")));
         clickOnElement(addButton);
     }
-    public void enterNationalityName(String Nationality){
+
+    public void enterNationalityName(String Nationality) {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='oxd-form-row']//input[@class='oxd-input oxd-input--active']")));
         inputNationalityName.sendKeys("AlgeriaTest");
     }
-    public void clickOnSaveButton(){
+
+    public void clickOnSaveButton() {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@type='submit']")));
         clickOnElement(SaveButtonElement);
     }
+
     public boolean isRequiredMSGDisplay() {
         wait.until(ExpectedConditions.visibilityOf(requiredMSG));
         return requiredMSG.isDisplayed();
